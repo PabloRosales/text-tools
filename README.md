@@ -18,3 +18,8 @@ In Light Mode:
 ## Requirements
 
 Fontawesome is needed for the icons at `sites/src/assets/fontawesome`.
+
+
+## License
+
+See [LICENSE](LICENSE)
