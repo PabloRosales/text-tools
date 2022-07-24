@@ -8,8 +8,6 @@ services:
       - ./sites/src:/home/node/src
       - ./sites/package.json:/home/node/package.json
       - ./sites/tailwind.config.js:/home/node/tailwind.config.js
-      - ./sites/.postcssrc:/home/node/.postcssrc
-      - ./sites/.htmlnanorc:/home/node/.htmlnanorc
       - ./sites/tsconfig.json:/home/node/tsconfig.json
     command: npm run dev:text-tools
     ports:
