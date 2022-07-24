@@ -1,0 +1,21 @@
+version: '3'
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./sites/src:/home/node/src
+      - ./sites/package.json:/home/node/package.json
+      - ./sites/tailwind.config.js:/home/node/tailwind.config.js
+      - ./sites/.postcssrc:/home/node/.postcssrc
+      - ./sites/.htmlnanorc:/home/node/.htmlnanorc
+      - ./sites/tsconfig.json:/home/node/tsconfig.json
+    command: npm run dev:text-tools
+    ports:
+      - "8080:8080"
+      - "1234:1234"
+    environment:
+      SITE: text-tools
+      DEBUG: node-server:*
+      NODE_ENV: development
